@@ -91,6 +91,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
             item.keyEquivalentModifierMask = Self.hotKeyMask
             item.target = self
             item.representedObject = preset.name
+            item.image = PresetPreview.image(for: preset, connected: connected)
             item.state = preset.isActive(in: connected) ? .on : .off
             item.isEnabled = preset.isAvailable(in: connected)
             if !item.isEnabled {

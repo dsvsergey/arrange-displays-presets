@@ -5,6 +5,10 @@ struct DisplayPlacement: Codable, Equatable {
     var name: String
     var x: Int32
     var y: Int32
+    /// Size in points; optional because presets saved by older versions lack it.
+    var width: Int32?
+    var height: Int32?
+    var builtin: Bool?
 }
 
 struct Preset: Codable, Equatable {
@@ -17,7 +21,12 @@ struct Preset: Codable, Equatable {
 
     static func fromCurrent(named name: String) -> Preset {
         let placements = Displays.connected().map {
-            DisplayPlacement(uuid: $0.uuid, name: $0.name, x: Int32($0.origin.x), y: Int32($0.origin.y))
+            DisplayPlacement(
+                uuid: $0.uuid, name: $0.name,
+                x: Int32($0.origin.x), y: Int32($0.origin.y),
+                width: Int32($0.size.width), height: Int32($0.size.height),
+                builtin: $0.isBuiltin
+            )
         }
         return Preset(name: name, displays: placements)
     }

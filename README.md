@@ -42,6 +42,8 @@ still puts the Mac to sleep.
 
 ### Menu
 
+- Each preset shows a miniature of its arrangement: the built-in display is
+  filled, external ones are outlined, a bar along the top marks the main display.
 - ✓ marks the preset matching the current arrangement.
 - Greyed-out presets need a display that is not connected.
 - **Launch at Login** works when the app runs from /Applications.

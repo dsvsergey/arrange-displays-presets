@@ -8,6 +8,7 @@ struct ConnectedDisplay {
     let uuid: String
     let name: String
     let origin: CGPoint
+    let size: CGSize
     let isBuiltin: Bool
 }
 
@@ -41,6 +42,7 @@ enum Displays {
                 uuid: uuid,
                 name: localizedName(for: id),
                 origin: CGDisplayBounds(id).origin,
+                size: CGDisplayBounds(id).size,
                 isBuiltin: CGDisplayIsBuiltin(id) != 0
             )
         }

@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "Sources/DisplayPresets/Displays.swift": {
-    "mtime": 1791055469.7294755,
-    "ast_hash": "bd1e2a0ab3982fafe71fbb88cddbfa0f",
+    "mtime": 1790759829.4189153,
+    "ast_hash": "f94ca41c3bc7629c88a149f975fd71ed",
     "semantic_hash": ""
   },
   "Sources/DisplayPresets/HotKeys.swift": {
@@ -30,13 +30,13 @@
     "semantic_hash": ""
   },
   "Sources/DisplayPresets/MenuBarController.swift": {
-    "mtime": 1791055483.207551,
-    "ast_hash": "13de840f43ccd3db43084abf8b58859d",
+    "mtime": 1791018896.6634703,
+    "ast_hash": "1d19ab4bc2fc9615c65fba861e56a29a",
     "semantic_hash": ""
   },
   "Sources/DisplayPresets/PresetStore.swift": {
-    "mtime": 1791055469.7299938,
-    "ast_hash": "5d60baff02298aa72bec47b554cdd8b8",
+    "mtime": 1790760091.4723406,
+    "ast_hash": "39d0f8c6c6534a7c7ccde28807c079bb",
     "semantic_hash": ""
   },
   "Sources/DisplayPresets/main.swift": {
@@ -52,11 +52,6 @@
   "README.md": {
     "mtime": 1791018922.3860137,
     "ast_hash": "3442b7c1f64358383220698cf3d5ef6a",
-    "semantic_hash": ""
-  },
-  "Sources/DisplayPresets/PresetPreview.swift": {
-    "mtime": 1791055520.029953,
-    "ast_hash": "ec26744a869b0968ca4093bc84bc3cd6",
     "semantic_hash": ""
   }
 }
