@@ -33,6 +33,13 @@ Menu → **Auto-apply on Connect** → pick a preset (marked ⚡︎). It is appl
 automatically ~2 s after exactly that set of displays becomes connected
 (e.g. plugging in the monitor or opening the lid). One per display set.
 
+### Keep Mac Awake
+
+Menu → **Keep Mac Awake** stops the Mac and its displays from sleeping while
+idle. While it is on, the menu bar icon changes to a cup. The setting is
+remembered across restarts. Closing the lid with no external display connected
+still puts the Mac to sleep.
+
 ### Menu
 
 - ✓ marks the preset matching the current arrangement.

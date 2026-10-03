@@ -1,0 +1,57 @@
+{
+  "Package.swift": {
+    "mtime": 1790759828.4021735,
+    "ast_hash": "7025939269e4b0b5700b9e1eeb9b7079",
+    "semantic_hash": ""
+  },
+  "Sources/DisplayPresets/CLI.swift": {
+    "mtime": 1790759832.550866,
+    "ast_hash": "59a7beb63218303137af22d37a19b7b9",
+    "semantic_hash": ""
+  },
+  "Sources/DisplayPresets/DisplayWatcher.swift": {
+    "mtime": 1790760101.437608,
+    "ast_hash": "f380bb954618a952ca0852a8682b909b",
+    "semantic_hash": ""
+  },
+  "Sources/DisplayPresets/Displays.swift": {
+    "mtime": 1790759829.4189153,
+    "ast_hash": "f94ca41c3bc7629c88a149f975fd71ed",
+    "semantic_hash": ""
+  },
+  "Sources/DisplayPresets/HotKeys.swift": {
+    "mtime": 1790760079.1951783,
+    "ast_hash": "636deaf6429220368759f0bf4166d83a",
+    "semantic_hash": ""
+  },
+  "Sources/DisplayPresets/KeepAwake.swift": {
+    "mtime": 1791018887.7737582,
+    "ast_hash": "3db38a3a4eb6346a2b575638d134292a",
+    "semantic_hash": ""
+  },
+  "Sources/DisplayPresets/MenuBarController.swift": {
+    "mtime": 1791018896.6634703,
+    "ast_hash": "1d19ab4bc2fc9615c65fba861e56a29a",
+    "semantic_hash": ""
+  },
+  "Sources/DisplayPresets/PresetStore.swift": {
+    "mtime": 1790760091.4723406,
+    "ast_hash": "39d0f8c6c6534a7c7ccde28807c079bb",
+    "semantic_hash": ""
+  },
+  "Sources/DisplayPresets/main.swift": {
+    "mtime": 1790759833.5687187,
+    "ast_hash": "d53ae2504a9084b753e9bcdaaa01bd8a",
+    "semantic_hash": ""
+  },
+  "build.sh": {
+    "mtime": 1790759835.6379309,
+    "ast_hash": "96af04995d04cb76e0ae5a2123c5d249",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1791018922.3860137,
+    "ast_hash": "3442b7c1f64358383220698cf3d5ef6a",
+    "semantic_hash": ""
+  }
+}

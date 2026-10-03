@@ -7,14 +7,12 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private let menu = NSMenu()
     private var hotKeys: HotKeys?
     private var watcher: DisplayWatcher?
+    private let keepAwake = KeepAwake()
     private var lastCycle = Date.distantPast
 
     override init() {
         super.init()
-        if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "display.2", accessibilityDescription: "Display Presets")
-            button.image?.isTemplate = true
-        }
+        updateIcon()
         menu.delegate = self
         menu.autoenablesItems = false
         statusItem.menu = menu
@@ -22,6 +20,13 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         hotKeys = HotKeys { [weak self] digit in self?.handleHotKey(digit) }
         hotKeys?.registerDigits()
         watcher = DisplayWatcher { [weak self] in self?.autoApplyIfNeeded() }
+    }
+
+    private func updateIcon() {
+        // A cup marks that Keep Awake is on.
+        let symbol = keepAwake.isEnabled ? "cup.and.saucer.fill" : "display.2"
+        statusItem.button?.image = NSImage(systemSymbolName: symbol, accessibilityDescription: "Display Presets")
+        statusItem.button?.image?.isTemplate = true
     }
 
     private static let hotKeyMask: NSEvent.ModifierFlags = [.control, .option, .command]
@@ -141,6 +146,12 @@ final class MenuBarController: NSObject, NSMenuDelegate {
 
         menu.addItem(.separator())
 
+        let awake = NSMenuItem(title: "Keep Mac Awake", action: #selector(toggleKeepAwake), keyEquivalent: "")
+        awake.target = self
+        awake.state = keepAwake.isEnabled ? .on : .off
+        awake.toolTip = "Prevents the Mac and its displays from sleeping while idle"
+        menu.addItem(awake)
+
         let login = NSMenuItem(title: "Launch at Login", action: #selector(toggleLaunchAtLogin(_:)), keyEquivalent: "")
         login.target = self
         login.state = SMAppService.mainApp.status == .enabled ? .on : .off
@@ -203,6 +214,11 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         if let url = URL(string: "x-apple.systempreferences:com.apple.Displays-Settings.extension") {
             NSWorkspace.shared.open(url)
         }
+    }
+
+    @objc private func toggleKeepAwake() {
+        keepAwake.toggle()
+        updateIcon()
     }
 
     @objc private func toggleLaunchAtLogin(_ sender: NSMenuItem) {
